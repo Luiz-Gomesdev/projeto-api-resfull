@@ -1,15 +1,9 @@
-package gft.com.udemy.model;
+package gft.com.udemy.shared;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+public class ProdutoDTO {
 
-@Entity
-public class Produto {
+    //É usado para ficar transferindo dados entre Controller e Service
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String nome;
@@ -19,17 +13,6 @@ public class Produto {
     private Double valor;
 
     private String observacao;
-
-    public Produto() {
-    }
-
-    public Produto(Integer id, String nome, Integer quantidade, Double valor, String observacao) {
-        this.id = id;
-        this.nome = nome;
-        this.quantidade = quantidade;
-        this.valor = valor;
-        this.observacao = observacao;
-    }
 
     public Integer getId() {
         return id;
@@ -70,4 +53,5 @@ public class Produto {
     public void setObservacao(String observacao) {
         this.observacao = observacao;
     }
+
 }

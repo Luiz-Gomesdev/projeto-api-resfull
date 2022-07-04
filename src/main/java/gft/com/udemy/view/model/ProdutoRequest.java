@@ -1,16 +1,6 @@
-package gft.com.udemy.model;
+package gft.com.udemy.view.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
-public class Produto {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+public class ProdutoRequest {
 
     private String nome;
 
@@ -19,25 +9,7 @@ public class Produto {
     private Double valor;
 
     private String observacao;
-
-    public Produto() {
-    }
-
-    public Produto(Integer id, String nome, Integer quantidade, Double valor, String observacao) {
-        this.id = id;
-        this.nome = nome;
-        this.quantidade = quantidade;
-        this.valor = valor;
-        this.observacao = observacao;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    //#endregion
 
     public String getNome() {
         return nome;
